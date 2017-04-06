@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Play" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-eA-xen"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0H-Fk-jEs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="I3Q-VJ-Obe"/>
+                                    <constraint firstAttribute="height" constant="104" id="i5l-lc-isQ"/>
+                                </constraints>
+                                <state key="normal" image="augmented-reality"/>
+                                <connections>
+                                    <action selector="locationReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obz-1z-Wj2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b0H-Fk-jEs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="35Q-kJ-T7Q"/>
+                            <constraint firstItem="AEd-eA-xen" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6nH-33-Mpz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AEd-eA-xen" secondAttribute="bottom" id="GjE-Xz-Ft4"/>
+                            <constraint firstItem="b0H-Fk-jEs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="e0a-Za-ZH9"/>
+                            <constraint firstAttribute="trailing" secondItem="AEd-eA-xen" secondAttribute="trailing" id="gkx-t6-sDb"/>
+                            <constraint firstItem="AEd-eA-xen" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r4N-58-G01"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="AEd-eA-xen" id="E1L-g8-gdt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="augmented-reality" width="512" height="512"/>
+    </resources>
+</document>
