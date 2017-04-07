@@ -87,12 +87,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDeleg
         //on typing select annotations we get suggestions automativcally just look for the synonyms of the word you want to imply
         mapView.deselectAnnotation(view.annotation!, animated: true)
         if view.annotation! is MKUserLocation{
+            //Checking whether the selected annotation is user
             return
         }
+        //Making the region smaller and zooming in on the pokemon
         let region = MKCoordinateRegionMakeWithDistance((view.annotation?.coordinate)!,150 , 150)
         self.mapView.setRegion(region, animated: true)
         if let coordinate = self.manager.location?.coordinate{
             if MKMapRectContainsPoint(mapView.visibleMapRect, MKMapPointForCoordinate(coordinate)){
+                //passing the selected pokemon to battle view controller
+                let battle = BattleViewController()
+                let pokemon = (view.annotation as! PokemonAnnotation).pokemon
+                battle.pokemon = pokemon
+                //Making a segue from view controlller to battle view controller
+                self.present(battle, animated: true, completion: nil)
                 print("in range")
             }
             else{

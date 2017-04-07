@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8401D04B1E97653800EF8F9A /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D04A1E97653800EF8F9A /* BattleScene.swift */; };
+		8401D04D1E97655300EF8F9A /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D04C1E97655300EF8F9A /* BattleViewController.swift */; };
 		842DA39F1E95FFFE0063E550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DA39E1E95FFFE0063E550 /* AppDelegate.swift */; };
 		842DA3A11E95FFFE0063E550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DA3A01E95FFFE0063E550 /* ViewController.swift */; };
 		842DA3A41E95FFFE0063E550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842DA3A21E95FFFE0063E550 /* Main.storyboard */; };
@@ -120,6 +122,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8401D04A1E97653800EF8F9A /* BattleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleScene.swift; sourceTree = "<group>"; };
+		8401D04C1E97655300EF8F9A /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		842DA39B1E95FFFE0063E550 /* Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842DA39E1E95FFFE0063E550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842DA3A01E95FFFE0063E550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				84B3D2631E963F7A00214BA9 /* Pokedex.swift */,
 				84B3D2651E9645B700214BA9 /* CDHelper.swift */,
 				84B3D2671E965C9B00214BA9 /* PokemonAnnotation.swift */,
+				8401D04A1E97653800EF8F9A /* BattleScene.swift */,
+				8401D04C1E97655300EF8F9A /* BattleViewController.swift */,
 			);
 			path = Play;
 			sourceTree = "<group>";
@@ -568,11 +574,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8401D04D1E97655300EF8F9A /* BattleViewController.swift in Sources */,
 				84B3D2641E963F7A00214BA9 /* Pokedex.swift in Sources */,
 				84B3D2661E9645B700214BA9 /* CDHelper.swift in Sources */,
 				842DA3A71E95FFFE0063E550 /* Play.xcdatamodeld in Sources */,
 				842DA3A11E95FFFE0063E550 /* ViewController.swift in Sources */,
 				84B3D2681E965C9B00214BA9 /* PokemonAnnotation.swift in Sources */,
+				8401D04B1E97653800EF8F9A /* BattleScene.swift in Sources */,
 				842DA39F1E95FFFE0063E550 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
