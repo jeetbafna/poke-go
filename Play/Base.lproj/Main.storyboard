@@ -30,12 +30,24 @@
                                     <action selector="locationReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obz-1z-Wj2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4n-Gb-Fp9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Qag-aL-lln"/>
+                                    <constraint firstAttribute="width" constant="54" id="TtQ-cN-48T"/>
+                                </constraints>
+                                <state key="normal" image="backpack"/>
+                                <connections>
+                                    <segue destination="M4Y-HY-JMd" kind="showDetail" id="ziW-56-LNJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="b0H-Fk-jEs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="35Q-kJ-T7Q"/>
                             <constraint firstItem="AEd-eA-xen" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6nH-33-Mpz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AEd-eA-xen" secondAttribute="bottom" id="GjE-Xz-Ft4"/>
+                            <constraint firstItem="H4n-Gb-Fp9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ohg-NG-Pgc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H4n-Gb-Fp9" secondAttribute="bottom" constant="29" id="b0S-GF-qoW"/>
                             <constraint firstItem="b0H-Fk-jEs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="e0a-Za-ZH9"/>
                             <constraint firstAttribute="trailing" secondItem="AEd-eA-xen" secondAttribute="trailing" id="gkx-t6-sDb"/>
                             <constraint firstItem="AEd-eA-xen" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r4N-58-G01"/>
@@ -49,8 +61,64 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--Pokedex-->
+        <scene sceneID="lpG-Ad-ydw">
+            <objects>
+                <viewController id="M4Y-HY-JMd" customClass="Pokedex" customModule="Play" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c46-WE-CJ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Sk-m7-TZz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i24-Hb-BQL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="exC-R6-rQS">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseCell" id="ijn-6k-Rln">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ijn-6k-Rln" id="ioP-Su-qc6">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFe-lI-3vZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MQL-M3-7Bb"/>
+                                    <constraint firstAttribute="width" constant="50" id="o2p-Ro-5dW"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="map"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="RFe-lI-3vZ" id="iFy-Er-8SV">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Sk-m7-TZz" firstAttribute="top" secondItem="RFe-lI-3vZ" secondAttribute="bottom" constant="10" id="CWl-uA-7aS"/>
+                            <constraint firstItem="RFe-lI-3vZ" firstAttribute="centerX" secondItem="i24-Hb-BQL" secondAttribute="centerX" id="nvn-tv-bkd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="exC-R6-rQS" id="tFC-oX-XaR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRG-8R-DEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="156.07196401799101"/>
+        </scene>
     </scenes>
     <resources>
         <image name="augmented-reality" width="512" height="512"/>
+        <image name="backpack" width="512" height="512"/>
+        <image name="map" width="512" height="512"/>
     </resources>
 </document>
