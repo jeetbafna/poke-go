@@ -23,6 +23,7 @@ class BattleViewController: UIViewController {
         //passing the pokemon you get from view controller to battle scene
         scene.pokemon = pokemon
         scene.scaleMode = .aspectFit
+        //giving battle scene the access or authority to load
         skView.presentScene(scene)
         // Do any additional setup after loading the view.
     }

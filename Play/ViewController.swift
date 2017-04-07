@@ -99,7 +99,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDeleg
                 let battle = BattleViewController()
                 let pokemon = (view.annotation as! PokemonAnnotation).pokemon
                 battle.pokemon = pokemon
-                //Making a segue from view controlller to battle view controller
+                //Making a segue from view controller to battle view controller
                 self.present(battle, animated: true, completion: nil)
                 print("in range")
             }
