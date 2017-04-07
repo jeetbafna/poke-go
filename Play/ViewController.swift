@@ -97,11 +97,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDeleg
             if MKMapRectContainsPoint(mapView.visibleMapRect, MKMapPointForCoordinate(coordinate)){
                 //passing the selected pokemon to battle view controller
                 let battle = BattleViewController()
+                
                 let pokemon = (view.annotation as! PokemonAnnotation).pokemon
                 battle.pokemon = pokemon
                 //Making a segue from view controller to battle view controller
                 self.present(battle, animated: true, completion: nil)
                 print("in range")
+                self.mapView.removeAnnotation(view.annotation!)
             }
             else{
                 print("out of range")
